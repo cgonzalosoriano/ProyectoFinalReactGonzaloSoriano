@@ -1,0 +1,387 @@
+/* Estilos globales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Estilos del contenedor principal */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Estilos del NavBar */
+nav {
+  width: 100%;
+  background-color: #333;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.logo img {
+  height: 100px; /* Ajusta la altura del logo */
+  width: auto;  /* Mantiene la proporción */
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f4f4f4;
+}
+
+.cart-widget {
+  display: flex;
+  align-items: center;
+  color: #f4f4f4;
+}
+
+.cart-widget i {
+  font-size: 1.5rem;
+  color: #f4f4f4;
+}
+
+.cart-widget span {
+  margin-left: 0.5rem;
+  background-color: #e74c3c;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  color: #fff;
+}
+
+/* Estilos del Banner */
+.banner {
+  width: 97.5%;
+  background: linear-gradient(45deg, #2980b9, #e74c3c);
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner p {
+  font-size: 1.25rem;
+}
+
+/* Estilos de los Productos Destacados e ItemList */
+.featured-products,
+.item-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilos de los Items */
+.item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.item h3 {
+  color: #e74c3c;
+  font-size: 1.25rem;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.item p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.item button {
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.item button:hover {
+  background-color: #1c5985;
+}
+
+/* Estilos del Selector de Cantidad */
+.item-quantity-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.item-quantity-selector button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.item-quantity-selector button:hover {
+  background-color: #c0392b;
+}
+
+.item-quantity-selector span {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Estilos para las Páginas */
+.page {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.page p,
+.page ul {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+.page ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.page ul li {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+}
+
+/* Estilos del Blog */
+article {
+  margin-top: 2rem;
+}
+
+article h3 {
+  font-size: 1.75rem;
+  color: #e74c3c;
+  margin-bottom: 1rem;
+}
+
+article p {
+  margin-bottom: 1rem;
+}
+
+/* Estilos para la página del carrito */
+.cart-page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 1rem;
+  border-radius: 8px;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-details h3 {
+  font-size: 1.25rem;
+  margin: 0;
+  color: #333;
+}
+
+.item-details p {
+  margin: 0.25rem 0;
+  color: #666;
+}
+
+.cart-summary {
+  margin-top: 2rem;
+  text-align: right;
+}
+
+.cart-summary h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn-clear-cart {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-clear-cart:hover {
+  background-color: #c0392b;
+}
+
+/* Estilos para la página de subastas */
+.auction-page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.auction-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.auction-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.auction-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.auction-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.auction-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #e74c3c;
+}
+
+.auction-item p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.bids ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.bids ul li {
+  background-color: #f4f4f4;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.auction-item input[type='text'],
+.auction-item input[type='number'],
+.auction-item input[type='tel'] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.auction-item button {
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: auto;
+}
+
+.auction-item button:hover {
+  background-color: #1c5985;
+}
